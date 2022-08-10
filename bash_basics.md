@@ -38,8 +38,11 @@ $(<command>)
 for docker_dir in *; do if ! [ -f $docker_dir ]; then echo $docker_dir;  cd $docker_dir; hadolint --failure-threshold warning Dockerfile || FAILURE_COUNT=$((FAILURE_COUNT+1)); cd ..; fi; done;
 ```
 - `-f` 
-- `||`
+- `||` successive command: next command is run reguardless if the preceding command exited without errors. 
 - `!` 
+- `\` concatenating lines together.
+- `&&` successive command: next command is run if and only if the preceding command exited without errors. (logical AND)\
+- `-` read the input from `stdin` (console)
 
 
 

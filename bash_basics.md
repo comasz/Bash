@@ -45,7 +45,10 @@ for docker_dir in *; do if ! [ -f $docker_dir ]; then echo $docker_dir;  cd $doc
 - `-` read the input from `stdin` (console)
 
 
-
+### Useful Commands
+``` bash
+$ ls -lha *.json
+```
 
 ```bash
     - |-
